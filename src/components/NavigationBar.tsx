@@ -6,6 +6,13 @@ const NavigationBar = () => {
   const currentPath = location.pathname;
 
   const isActive = (path: string) => {
+    if (path === "/home") {
+      return currentPath === "/home";
+    }
+    // For paths like /racing/123, make the racing nav item active
+    if (path === "/racing") {
+      return currentPath.startsWith("/racing");
+    }
     return currentPath === path;
   };
 
@@ -31,8 +38,8 @@ const NavigationBar = () => {
       ),
     },
     {
-      label: "Leaderboard",
-      path: "/leaderboard",
+      label: "Racing",
+      path: "/racing",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +52,9 @@ const NavigationBar = () => {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+          <path d="M19 15H5l4-8"></path>
+          <path d="M14 15v2c0 1-1 2-2 2h-1"></path>
+          <path d="M5 15v2c0 1 1 2 2 2h1"></path>
         </svg>
       ),
     },
