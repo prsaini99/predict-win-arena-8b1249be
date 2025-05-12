@@ -34,7 +34,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/">
           <DailyTrivia isOpen={showTrivia} onClose={() => setShowTrivia(false)} />
           <Routes>
             <Route path="/" element={<Splash />} />
