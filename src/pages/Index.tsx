@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Avatar } from "@/components/ui/avatar";
@@ -13,9 +12,9 @@ import NavigationBar from "@/components/NavigationBar";
 const liveMatches = [
   {
     id: "1",
-    type: "cricket",
+    type: "cricket" as const,
     title: "India vs Australia",
-    status: "live",
+    status: "live" as const,
     time: "10:30 AM",
     progress: "Over 10.2",
     teamALogo: "/placeholder.svg",
@@ -27,9 +26,9 @@ const liveMatches = [
   },
   {
     id: "2",
-    type: "racing",
+    type: "racing" as const,
     title: "Delhi Derby - Race 3",
-    status: "live",
+    status: "live" as const,
     time: "11:15 AM",
     raceNumber: 3,
     raceVenue: "Delhi",
@@ -39,9 +38,9 @@ const liveMatches = [
 const upcomingMatches = [
   {
     id: "3",
-    type: "cricket",
+    type: "cricket" as const,
     title: "England vs New Zealand",
-    status: "upcoming",
+    status: "upcoming" as const,
     time: "02:00 PM",
     countdown: "2h",
     teamALogo: "/placeholder.svg",
@@ -51,9 +50,9 @@ const upcomingMatches = [
   },
   {
     id: "4",
-    type: "racing",
+    type: "racing" as const,
     title: "Mumbai Cup - Race 1",
-    status: "upcoming",
+    status: "upcoming" as const,
     time: "03:30 PM",
     countdown: "3h 30m",
     raceNumber: 1,
