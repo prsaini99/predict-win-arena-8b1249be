@@ -18,6 +18,11 @@ import HorseRacingHome from "./components/HorseRacingHome";
 import RacePrediction from "./components/RacePrediction";
 import RewardsPage from "./components/RewardsPage";
 import DailyTrivia from "./components/DailyTrivia";
+import NotificationsPage from "./components/NotificationsPage";
+import SettingsPage from "./components/SettingsPage";
+import StatsPage from "./components/StatsPage";
+import HelpPage from "./components/HelpPage";
+import MorePage from "./components/MorePage";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +56,11 @@ const App = () => {
             <Route path="/rewards" element={<RewardsPage />} />
             <Route path="/racing" element={<HorseRacingHome />} />
             <Route path="/racing/:id" element={<RacePrediction />} />
+            <Route path="/notifications" element={<NotificationsPage />} />
+            <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/stats" element={<StatsPage />} />
+            <Route path="/help" element={<HelpPage />} />
+            <Route path="/more" element={<MorePage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
