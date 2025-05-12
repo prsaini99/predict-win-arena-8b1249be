@@ -35,7 +35,8 @@ const ProfileSetup = () => {
     setTimeout(() => {
       setIsLoading(false);
       toast.success("Profile created successfully!");
-      navigate("/home");
+      // Ensure we use the correct path to home
+      navigate("/home", { replace: true });
     }, 1500);
   };
 

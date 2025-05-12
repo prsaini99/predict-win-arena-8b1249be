@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -43,7 +42,8 @@ const Login = () => {
     // Simulate OTP verification
     setTimeout(() => {
       setIsLoading(false);
-      navigate("/profile-setup");
+      // Ensure we use the correct path and replace the history
+      navigate("/profile-setup", { replace: true });
     }, 1500);
   };
 
