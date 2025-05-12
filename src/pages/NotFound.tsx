@@ -26,15 +26,11 @@ const NotFound = () => {
             <Link to="/home">Go to Home</Link>
           </Button>
           <Button 
-            asChild 
             variant="outline" 
             className="px-6"
             onClick={() => window.history.back()}
           >
-            <Link to="#" onClick={(e) => {
-              e.preventDefault();
-              window.history.back();
-            }}>Go Back</Link>
+            Go Back
           </Button>
         </div>
       </div>
